@@ -2,6 +2,8 @@
 Ruby project
 
 
+Fetching data using Ruby scraping.
+
 
 scrapy
 ├── lib
