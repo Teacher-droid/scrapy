@@ -6,11 +6,13 @@ require 'rspec'
 
 PAGE_URL = "http://www.annuaire-des-mairies.com/val-d-oise.html"
 
+# ma variable de récuperation des mairies
 def get_townhall_urls(page)
   townhall_urls = page.xpath('//a[contains(@class, "lientxt")]/text()').map{|x| x.to_s.downcase.gsub(" ","-")}
   return townhall_urls
 end
 
+# ma variable de récuperation des adresses e-mail
 def get_townhall_email(townhall_urls)
   array_email = []
   
@@ -21,6 +23,7 @@ def get_townhall_email(townhall_urls)
   return array_email
 end
 
+# je lance le tout avec ma variable perform
 def perform
   page = Nokogiri::HTML(URI.open(PAGE_URL))
   townhall_urls = get_townhall_urls(page)
