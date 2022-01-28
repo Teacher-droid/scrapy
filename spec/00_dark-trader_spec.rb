@@ -1,4 +1,4 @@
-require_relative "../lib/crypto_scrapping"
+require_relative "../lib/dark-trader"
 
 require 'nokogiri'
 require 'open-uri'
