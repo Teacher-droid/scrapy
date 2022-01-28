@@ -13,7 +13,7 @@ end
 
 def get_townhall_email(townhall_urls)
   array_email = []
-  #townhall_email = townhall_urls.xpath('//html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]')
+  
   townhall_urls.each do |counter|
     page3 = Nokogiri::HTML(URI.open("https://www.annuaire-des-mairies.com/95/#{counter}.html"))
     array_email << page3.xpath('//html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text.to_s
