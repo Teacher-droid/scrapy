@@ -42,3 +42,4 @@ def perform
   puts final_hash
 end
 
+perform
